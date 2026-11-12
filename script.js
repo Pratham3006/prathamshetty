@@ -130,7 +130,7 @@ contactForm.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
 
   try {
-    const response = await fetch('https://portfoliobackend-production-b1be.up.railway.app/send', {
+    const response = await fetch('https://portfolio-backend-ruddy-iota.vercel.app/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
