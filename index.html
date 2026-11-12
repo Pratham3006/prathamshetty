@@ -1,0 +1,808 @@
+<!--
+  Greetings!
+
+  This delightful template has been meticulously crafted and brought to life by Pratham Shetty. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
+-->
+
+<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
+
+<!--
+  Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Read and update content attributes accordingly  -->
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Pratham Shetty's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pratham's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pratham's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/pf3.png"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    <!-- Your name here -->
+    <title>Pratham's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            <span>Hi, I'm Pratham Shetty</span>
+            <span>Frontend Developer</span>
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            A frontend engineer and interface designer passionate about crafting intuitive, accessible, and fast web experiences. 
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="client">
+        <div class="container">
+          <h2 class="h2">Trusted by</h2>
+          <div class="logos">
+            <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="https://cdn.prod.website-files.com/63dd2131ded6c2a2640cd5bd/640b38b89a999d2a8c487f74_EO2Colored.png"
+                alt="EO2 exp"
+                class="logo hide to-top"
+              />
+
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/buntae.svg"
+                alt="Buntae"
+                class="logo"
+              />
+
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/v2.svg"
+                alt="Theia"
+                class="logo hide to-bottom"
+              />
+            </div>
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="https://cdn.famekeeda.com/assets/famekeeda_logo/fame_keeda_logo.svg"
+                alt="Famekeeda"
+                class="logo hide to-top"
+              /><img
+                loading="lazy"
+                src="https://static.wixstatic.com/media/9aeb8a_cbedfa2b487e47adb922ef9a448822c8~mv2.jpg/v1/fill/w_360,h_84,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20blue%20bg.jpg"
+                alt="Claidroid"
+                class="logo"
+              /><img
+                loading="lazy"
+                src="https://dev-pixolo.de/wp-content/uploads/2024/06/pixolo_logo.png"
+                alt="Mighty furniture's"
+                class="logo hide to-bottom"
+              />
+            </div>
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/nflx_2.svg"
+                alt="Bulls eye"
+                class="logo hide to-top"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/pawloText.svg"
+                alt="Pawlo"
+                class="logo"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/title.svg"
+                alt="Fastlane"
+                class="logo hide to-bottom"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+             <div class="work-box">
+  <div class="work-textbox">
+    <h3 class="h3">Vintage Global Services</h3>
+    
+    <p class="work-text">
+     A premium website for Vintage Global Services that showcases their export packaging expertise through a structured design with smooth animations, responsive layout, and intuitive navigation.
+    </p>
+    
+    <ol class="work-technologies">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+      <li>UX/UI Design</li>
+    </ol>
+
+    <div class="work-links">
+      <a href="https://vintage-solutions.netlify.app/" target="_blank" rel="noopener" class="link">
+        Explore this project
+      </a>
+
+      <a
+        href="https://vintage-solutions.netlify.app/"
+        target="_blank"
+        rel="noopener"
+        title="Visit Website"
+      >
+        <img
+          src="assets/images/social-links/website.png"
+          alt="Website"
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </div>
+
+  <picture class="work-img">
+    <img
+      loading="lazy"
+      src="assets/images/work/wrk_1.JPG"
+      alt="Vintage Global Services - Premium Business Solutions Website"
+    />
+  </picture>
+</div>
+  <div class="work-box">
+  <div class="work-textbox">
+    <h3 class="h3">BUNTAE Community Platform</h3>
+
+    <p class="work-text">
+    A community platform for BUNTAE that connects Bunt engineers and architects across India while enabling networking, mentorship, and job opportunities through a usable and accessible experience.
+    </p>
+
+    <ol class="work-technologies">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React.js</li>
+      <li>UI/UX Engineering</li>
+      <li>Community Platform Design</li>
+    </ol>
+
+    <div class="work-links">
+      <a href="https://www.buntae.com/" target="_blank" rel="noopener" class="link">
+        Explore this project
+      </a>
+
+      <a
+        href="https://www.buntae.com/"
+        target="_blank"
+        rel="noopener"
+        title="Visit Website"
+      >
+        <img
+          src="assets/images/social-links/website.png"
+          alt="Website"
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </div>
+
+  <picture class="work-img">
+    <img
+      loading="lazy"
+      src="assets/images/work/wrk_2.JPG"
+      alt="BUNTAE - Community Platform for Engineers and Architects"
+    />
+  </picture>
+</div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Pawlo UI website</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                 Pawlo is a vibrant platform connecting dog lovers, pet parents, and vets — all under one friendly digital roof.
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JS</li>
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://fanciful-brioche-5206f6.netlify.app/" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://fanciful-brioche-5206f6.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/website.png"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/test_45.JPG"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+             <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">altered.agency</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Website for altered.agency
+                </p>
+                <ol class="work-technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://altered.agency/" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://altered.agency/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/website.png"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/test_46.JPG"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          
+
+           
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Travello</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">Step into a magical journey across India — where every flavour tells a story, every place holds a wonder, and every tradition echoes centuries of culture.</p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>JavaScript</li>
+                   <li>CSS</li>
+                  <li>HTML</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://tourista-travel.vercel.app/" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://tourista-travel.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/website.png"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/test_48.JPG"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+            
+           
+          </div>
+        </div>
+      </section>
+
+      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    The Importance of Software Documentation: Why It Is Necessary
+                  </h3>
+                  <p class="article-text">
+                    All the tips and tricks shared in this article are based on my personal experience and learning journey. This collection reflects the practical insights and techniques I've discovered while working with  real-world projects.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://medium.com/@prathamshetty71/the-importance-of-software-documentation-why-it-is-necessary-32a4e3467434" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img src="./assets/images/heart-outline.svg" alt="heart" />
+                    416
+                  </span>
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/featured-blog.webp"
+                  alt="MacBook Pro"
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">🧠 Demystifying Callback Functions in JavaScript: The What, Why, and How</h3>
+                  <p class="article-text">
+                   If you’re learning JavaScript, there’s a concept you’ll bump into again and again — the callback function. It sounds more intimidating than it actually is, but mastering callbacks is critical to becoming a proficient JavaScript developer.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://medium.com/@prathamshetty71/demystifying-callback-functions-in-javascript-the-what-why-and-how-7f3c43276353n" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    47
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    🚦 Why Do We Use defer in the script Tag? Understanding the Logic Behind It
+                  </h3>
+                  <p class="article-text">
+                    If you’ve ever added a script tag to an HTML document, you might have come across the mysterious defer attribute. You’ve probably seen it in tutorials or source code, but what does it really do? And more importantly — why should you use it?
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://medium.com/@prathamshetty71/heres-a-polished-medium-ready-article-that-dives-into-the-use-of-defer-in-the-script-tag-a85d5a02f5e9" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    177
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">🧩 What’s the Use of Hooks Like useMemo and useCallback in React?</h3>
+                  <div class="article-text">
+                    When working with React, performance and re-renders can quickly become tricky territory — especially in complex components or large applications. This is where hooks like useMemo and useCallback come into play.
+                  </div>
+                </div>
+                <div class="article-info">
+                  <a href="https://medium.com/@prathamshetty71/whats-the-use-of-hooks-like-usememo-and-usecallback-in-react-4af618c79ac3" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      loading="lazy"
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                    />
+                    350
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <!-- Frontend Technologies -->
+<img src="assets/images/skills/html.svg" alt="HTML" class="skills-img" loading="lazy" title="HTML">
+<img src="assets/images/skills/css.svg" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+<img src="assets/images/skills/sass.svg" alt="SASS" class="skills-img" loading="lazy" title="SASS">
+<img src="assets/images/skills/js.svg" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+<img src="assets/images/skills/ts.svg" alt="TypeScript" class="skills-img" loading="lazy" title="TypeScript">
+<img src="assets/images/skills/react.png" alt="React" class="skills-img" loading="lazy" title="React">
+<img src="assets/images/skills/angular.svg" alt="Angular" class="skills-img" loading="lazy" title="Angular">
+<img src="assets/images/skills/Next.js.svg" alt="Next.js" class="skills-img" loading="lazy" title="Next.js">
+<img src="assets/images/skills/bootstarp.svg" alt="Bootstrap" class="skills-img" loading="lazy" title="Bootstrap">
+<img src="assets/images/skills/respo.png" alt="Responsively" class="skills-img" loading="lazy" title="Responsively">
+<img src="assets/images/skills/figma.svg" alt="Figma" class="skills-img" loading="lazy" title="Figma">
+<img src="assets/images/skills/java.svg" alt="Java" class="skills-img" loading="lazy" title="Java">
+
+<!-- Backend Technologies -->
+<img src="assets/images/skills/node.js.svg" alt="Node.js" class="skills-img" loading="lazy" title="Node.js">
+<img src="assets/images/skills/express.svg" alt="Express.js" class="skills-img" loading="lazy" title="Express.js">
+<img src="assets/images/skills/spring.svg" alt="Spring Boot" class="skills-img" loading="lazy" title="Spring Boot">
+<img src="assets/images/skills/supabase.svg" alt="Supabase" class="skills-img" loading="lazy" title="Supabase">
+
+<!-- Databases -->
+<img src="assets/images/skills/mongo.svg" alt="MongoDB" class="skills-img" loading="lazy" title="MongoDB">
+<img src="assets/images/skills/Microsoft SQL Server.svg" alt="Microsoft SQL Server" class="skills-img" loading="lazy" title="Microsoft SQL Server">
+<img src="assets/images/skills/mysql.svg" alt="MySQL" class="skills-img" loading="lazy" title="MySQL">
+<img src="assets/images/skills/pgsql.png" alt="PostgreSQL" class="skills-img" loading="lazy" title="PostgreSQL">
+
+<!-- Tools -->
+<img src="assets/images/skills/git.svg" alt="Git" class="skills-img" loading="lazy" title="Git">
+<img src="assets/images/skills/github.svg" alt="GitHub" class="skills-img" loading="lazy" title="GitHub">
+<img src="assets/images/skills/gulp.svg" alt="Gulp" class="skills-img" loading="lazy" title="Gulp">
+
+<!-- Testing -->
+<img src="assets/images/skills/selenium.svg" alt="Selenium" class="skills-img" loading="lazy" title="Selenium">
+<img src="assets/images/skills/notion.svg" alt="Notion" class="skills-img" loading="lazy" title="Notion">
+
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+      <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Working with Pratham was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/rich-harris.png"
+                  alt="Rich Harris"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Harris Kareem</h3>
+                  <p class="testimonial-author-job">Developer @Outlets</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Pratham is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/frank-mcsherry.webp"
+                  alt="Andrew Mead"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">
+                   Andrew Mead
+                  </h3>
+                  <p class="testimonial-author-job">Chief Scientist @Logos
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+             
+                Talented artist, experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Pratham
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/brian-hirsh.png"
+                  alt="Brian Hirsh"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
+                  <p class="testimonial-author-job">Head @Zero-in</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Pratham is a true professional with amazing talent. He is a creative
+                thinker, has his finger on the pulse of whats to come, and
+                absolutely one of the quickest and best problem solvers I have
+                ever met.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/adam.png"
+                  alt="Adam Argalye"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Adam Argalye</h3>
+                  <p class="testimonial-author-job">SWE @Google</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+               Pratham is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because she understands how to tackle unknown problems with gumption. 
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/val-head.png"
+                  alt="Val Head"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Val Head</h3>
+                  <p class="testimonial-author-job">CEO @Engines</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Pratham is a talented artist. He is very experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Pratham
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/tim-satterwhite.webp"
+                  alt="Gary Simon"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Gary Simon</h3>
+                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                In my free time, I enjoy playing football ⚽
+              </p>
+              <!-- Replace src with your signatures and name -->
+              <img
+                src="assets/images/signature_1.png"
+                alt="Pratham Shetty"
+                class="signatures"
+                loading="lazy"
+              />
+            </div>
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message"  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/Pratham3006" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Leetcode" href="https://leetcode.com/u/pratham4556/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/leetcode.png"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/Pratham3006">Pratham Shetty</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
