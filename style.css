@@ -1148,6 +1148,7 @@ a.row:hover .row-arrow {
 .chip[data-filter="frontend"] { --c: #e8ff47; }
 .chip[data-filter="backend"] { --c: #5ee0ff; }
 .chip[data-filter="databases"] { --c: #ff9d4d; }
+.chip[data-filter="cms"] { --c: #ff6fb5; }
 .chip[data-filter="tools"] { --c: #c79bff; }
 .chip:hover {
   color: var(--white);
@@ -1233,6 +1234,7 @@ a.row:hover .row-arrow {
 .tool[data-cat="frontend"] { --c: #e8ff47; }
 .tool[data-cat="backend"] { --c: #5ee0ff; }
 .tool[data-cat="databases"] { --c: #ff9d4d; }
+.tool[data-cat="cms"] { --c: #ff6fb5; }
 .tool[data-cat="tools"] { --c: #c79bff; }
 
 /* category colour bar */
