@@ -151,7 +151,7 @@
   /* ---------- active nav link ---------- */
   const navLinks = $$(".nav a[href^='#']");
   if ("IntersectionObserver" in window) {
-    const sections = ["index", "notes", "toolkit", "journey", "why", "words", "contact"]
+    const sections = ["index", "journey", "toolkit", "why", "words", "notes", "contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
     const navIO = new IntersectionObserver(

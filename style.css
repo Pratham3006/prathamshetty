@@ -2569,3 +2569,8 @@ a.row:hover .row-arrow {
     display: none;
   }
 }
+
+/* articles now sit directly above contact: both have a hairline border, so drop one to avoid a doubled line */
+.notes + .contact {
+  border-top: 0;
+}
