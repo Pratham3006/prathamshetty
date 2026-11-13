@@ -126,9 +126,11 @@
     },
     true
   );
-  // catch anything that already failed before this script ran
+  // catch anything that already failed before this script ran.
+  // Lazy images are skipped: some browsers report them as "complete" with zero width before they've even started
+  // loading, which would wrongly swap a good logo for its monogram. Their failures arrive via the error event above.
   $$(".logo-row img, .stop-logo img").forEach((img) => {
-    if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) logoFallback(img);
+    if (img.loading !== "lazy" && img.complete && img.naturalWidth === 0 && img.getAttribute("src")) logoFallback(img);
   });
 
   /* ---------- mobile menu ---------- */
