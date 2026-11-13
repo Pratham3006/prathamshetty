@@ -1,807 +1,770 @@
-<!--
-  Greetings!
-
-  This delightful template has been meticulously crafted and brought to life by Pratham Shetty. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
--->
-
-<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
-
-<!--
-  Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Read and update content attributes accordingly  -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pratham Shetty — Software Engineer</title>
     <meta
       name="description"
-      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+      content="Portfolio of Pratham Shetty, a software engineer working across backend and frontend to build intuitive, accessible and fast products."
     />
+    <meta name="theme-color" content="#080808" />
 
-    <!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="Pratham Shetty's Portfolio">
-<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pratham Shetty — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software engineer building across backend and frontend: intuitive, accessible and fast products."
+    />
+    <meta property="og:image" content="assets/images/sharing-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Reference screenshot of updated site's header in place of content -->
-<meta itemprop="image" content="assets/images/sharing-card.png">
+    <link rel="icon" href="assets/images/pf3.png" type="image/png" />
 
-<!-- Facebook Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pratham's Portfolio">
-<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
-
-<!-- Reference screenshot of updated site's header in content -->
-<meta property="og:image" content="assets/images/sharing-card.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pratham's Portfolio">
-<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
-
-<!-- Reference screenshot of updated site's header in content -->
-<meta name="twitter:image" content="assets/images/sharing-card.png">
-
-
-<!-- Update favicon href attribute with image of yourself -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="shortcut icon"
-      href="assets/images/pf3.png"
-      type="image/png"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
     />
 
-    <!-- Preloading fonts for better performance -->
-
-    <link
-      rel="preload"
-      href="assets/fonts/Mona-Sans.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
-    <link rel="stylesheet" href="style.css"  />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-
-    <!-- Your name here -->
-    <title>Pratham's Portfolio</title>
   </head>
 
   <body>
+    <a class="skip" href="#index">Skip to projects</a>
 
-    <script>
-      const theme = localStorage.getItem("theme") || "dark";
-      document.body.classList.add(theme);
-    </script>
+    <!-- custom cursor + peek preview (enabled by JS on fine pointers) -->
+    <div class="cur-dot" aria-hidden="true"></div>
+    <div class="cur-ring" aria-hidden="true"><span>View</span></div>
+    <div class="peek" aria-hidden="true"><img alt="" /></div>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-    <header class="header">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#top" aria-label="Pratham Shetty, back to top">
+        <span class="brand-mark">PS</span>
+        <span class="brand-name">Pratham Shetty</span>
+      </a>
 
-      <div class="menu-btn-container">
-        <div class="container">
-          <button type="button"  class="menu-btn">menu</button>
-        </div>
-      </div>
-
-      <nav class="nav hidden">
-        <ol class="nav-items">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#work">My Work</a></li>
-          <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
-          <li class="nav-item">
-            <a href="#contact" data-focused="last-focused">Contact</a>
-          </li>
-        </ol>
+      <nav class="nav" aria-label="Primary">
+        <a href="#index">Work</a>
+        <a href="#notes">Notes</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#journey">Journey</a>
+        <a href="#why">About</a>
+        <a href="#words">Words</a>
+        <a class="nav-cta" href="#contact">Hire me <span aria-hidden="true">→</span></a>
       </nav>
 
-      <div class="container">
-        <div class="header-textbox">
-          <!-- Replace with your name and job title -->
-          <h1 class="h1">
-            <span>Hi, I'm Pratham Shetty</span>
-            <span>Frontend Developer</span>
-          </h1>
-
-          <!-- Add a small introductory paragraph about yourself -->
-          <p class="header-text">
-            A frontend engineer and interface designer passionate about crafting intuitive, accessible, and fast web experiences. 
-          </p>
-
-          <div class="header-btns">
-            <a href="#contact" class="btn btn-cta">Hire me</a>
-            <a href="#work" class="btn btn-secondary">See my work</a>
-          </div>
-        </div>
-      </div>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileNav">
+        <span>Menu</span>
+      </button>
     </header>
 
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#index">Work</a>
+      <a href="#notes">Notes</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#journey">Journey</a>
+      <a href="#why">About</a>
+      <a href="#words">Words</a>
+      <a href="#contact">Contact</a>
+    </div>
+
     <main>
-      <section class="client">
-        <div class="container">
-          <h2 class="h2">Trusted by</h2>
-          <div class="logos">
-            <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/63dd2131ded6c2a2640cd5bd/640b38b89a999d2a8c487f74_EO2Colored.png"
-                alt="EO2 exp"
-                class="logo hide to-top"
-              />
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="grid-lines" data-depth="0.04"></div>
+          <div class="orb" data-depth="0.14" data-mouse="26"></div>
+          <div class="ghost" data-depth="0.1" data-mouse="14">PS</div>
 
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/buntae.svg"
-                alt="Buntae"
-                class="logo"
-              />
+          <figure class="float f1" data-depth="0.32" data-mouse="38" style="--r: -7deg">
+            <img src="assets/images/work/wrk_1.jpg" alt="" loading="eager" />
+            <figcaption>001 / Vintage</figcaption>
+          </figure>
+          <figure class="float f2" data-depth="0.18" data-mouse="22" style="--r: 5deg">
+            <img src="assets/images/work/wrk_2.jpg" alt="" loading="eager" />
+            <figcaption>002 / Buntae</figcaption>
+          </figure>
+          <figure class="float f3" data-depth="0.46" data-mouse="52" style="--r: 9deg">
+            <img src="assets/images/work/test_45.jpg" alt="" loading="eager" />
+            <figcaption>003 / Pawlo</figcaption>
+          </figure>
+          <figure class="float f4" data-depth="0.24" data-mouse="30" style="--r: -4deg">
+            <img src="assets/images/work/test_48.jpg" alt="" loading="eager" />
+            <figcaption>005 / Travello</figcaption>
+          </figure>
+        </div>
 
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/v2.svg"
-                alt="Theia"
-                class="logo hide to-bottom"
-              />
+        <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+
+        <div class="hero-inner">
+          <p class="eyebrow reveal">Pratham / Software Engineering / India</p>
+
+          <h1 class="hero-title">
+            <span class="line"><span style="--i: 0">Software</span></span>
+            <span class="line"><span class="outline" style="--i: 1">Engineer</span></span>
+            <span class="line"><span class="lime" style="--i: 2">Tinkerer.</span></span>
+          </h1>
+
+          <div class="hero-foot">
+            <div class="hero-left">
+              <p class="hero-copy reveal">
+                A software engineer working across backend and frontend, from services and
+                databases to intuitive, accessible, and fast interfaces. Real products. Real code.
+                No templates.
+              </p>
+              <div class="hero-btns reveal">
+                <a class="btn btn-lime" href="#index" data-hover>See my work</a>
+                <a class="btn btn-ghost" href="#contact" data-hover>Hire me</a>
+              </div>
             </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="https://cdn.famekeeda.com/assets/famekeeda_logo/fame_keeda_logo.svg"
-                alt="Famekeeda"
-                class="logo hide to-top"
-              /><img
-                loading="lazy"
-                src="https://static.wixstatic.com/media/9aeb8a_cbedfa2b487e47adb922ef9a448822c8~mv2.jpg/v1/fill/w_360,h_84,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20blue%20bg.jpg"
-                alt="Claidroid"
-                class="logo"
-              /><img
-                loading="lazy"
-                src="https://dev-pixolo.de/wp-content/uploads/2024/06/pixolo_logo.png"
-                alt="Mighty furniture's"
-                class="logo hide to-bottom"
-              />
+
+            <dl class="hero-meta reveal">
+              <div>
+                <dt>Projects live</dt>
+                <dd><span data-count="5" data-pad="2">05</span></dd>
+              </div>
+              <div>
+                <dt>Articles</dt>
+                <dd><span data-count="4" data-pad="2">04</span></dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd class="avail"><span class="pulse"></span>Open to work</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TRUSTED BY ================= -->
+      <section class="trusted" aria-label="Companies I have worked with">
+        <div class="wrap trusted-head">
+          <p class="trusted-label">Trusted by / worked with</p>
+          <p class="trusted-label dim">09 companies</p>
+        </div>
+
+        <div class="marquee" data-marquee data-dir="-1">
+          <div class="marquee-track">
+            <ul class="logo-row">
+              <li><img class="logo" src="assets/images/trusted-by/eo2.png" alt="EO2 Exp" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/buntae.svg" alt="Buntae" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/theia.png" alt="Theia" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/famekeeda.svg" alt="Famekeeda" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/claidroid.png" alt="Claidroid" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/pixolo.png" alt="Pixolo" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/nflx_2.svg" alt="Bulls eye" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/pawlo.png" alt="Pawlo" loading="lazy" /></li>
+              <li><img class="logo" src="assets/images/trusted-by/altered.png" alt="altered" loading="lazy" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECT INDEX ================= -->
+      <section class="section index" id="index">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-no reveal">001</span>
+            <div>
+              <h2 class="sec-title reveal">Selected<br /><em>work</em></h2>
             </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/nflx_2.svg"
-                alt="Bulls eye"
-                class="logo hide to-top"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/pawloText.svg"
-                alt="Pawlo"
-                class="logo"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/title.svg"
-                alt="Fastlane"
-                class="logo hide to-bottom"
-              />
+            <p class="sec-note reveal">
+              Numbered in order of release
+              <span>Hover to inspect the specimen</span>
+            </p>
+          </div>
+
+          <div class="rows">
+            <a class="row reveal" href="https://vintage-solutions.netlify.app/" target="_blank" rel="noopener"
+              data-img="assets/images/work/wrk_1.jpg">
+              <span class="row-no"><span class="sr">Project </span><span class="roll" aria-hidden="true"><i>001</i><i>001</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">Vintage Global Services</h3>
+                <p class="row-desc">A premium website for Vintage Global Services that showcases their export packaging expertise through a structured design with smooth animations, responsive layout, and intuitive navigation.</p>
+              </span>
+              <ul class="row-tags" aria-label="Technologies">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive Design</li><li>UX/UI Design</li>
+              </ul>
+              <span class="tag status"><span class="dot"></span>Live</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+              <img class="row-thumb" src="assets/images/work/wrk_1.jpg" alt="Vintage Global Services website preview" loading="lazy" />
+            </a>
+
+            <a class="row reveal" href="https://www.buntae.com/" target="_blank" rel="noopener"
+              data-img="assets/images/work/wrk_2.jpg">
+              <span class="row-no"><span class="sr">Project </span><span class="roll" aria-hidden="true"><i>002</i><i>002</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">BUNTAE Community Platform</h3>
+                <p class="row-desc">A community platform for BUNTAE that connects Bunt engineers and architects across India while enabling networking, mentorship, and job opportunities through a usable and accessible experience.</p>
+              </span>
+              <ul class="row-tags" aria-label="Technologies">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React.js</li><li>UI/UX Engineering</li><li>Community Platform Design</li>
+              </ul>
+              <span class="tag status"><span class="dot"></span>Live</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+              <img class="row-thumb" src="assets/images/work/wrk_2.jpg" alt="BUNTAE community platform preview" loading="lazy" />
+            </a>
+
+            <a class="row reveal" href="https://fanciful-brioche-5206f6.netlify.app/" target="_blank" rel="noopener"
+              data-img="assets/images/work/test_45.jpg">
+              <span class="row-no"><span class="sr">Project </span><span class="roll" aria-hidden="true"><i>003</i><i>003</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">Pawlo UI website</h3>
+                <p class="row-desc">Pawlo is a vibrant platform connecting dog lovers, pet parents, and vets — all under one friendly digital roof.</p>
+              </span>
+              <ul class="row-tags" aria-label="Technologies">
+                <li>HTML</li><li>CSS</li><li>JS</li>
+              </ul>
+              <span class="tag status"><span class="dot"></span>Live</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+              <img class="row-thumb" src="assets/images/work/test_45.jpg" alt="Pawlo UI website preview" loading="lazy" />
+            </a>
+
+            <a class="row reveal" href="https://altered.agency/" target="_blank" rel="noopener"
+              data-img="assets/images/work/test_46.jpg">
+              <span class="row-no"><span class="sr">Project </span><span class="roll" aria-hidden="true"><i>004</i><i>004</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">altered.agency</h3>
+                <p class="row-desc">Website for altered.agency.</p>
+              </span>
+              <ul class="row-tags" aria-label="Technologies">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <span class="tag status"><span class="dot"></span>Live</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+              <img class="row-thumb" src="assets/images/work/test_46.jpg" alt="altered.agency website preview" loading="lazy" />
+            </a>
+
+            <a class="row reveal" href="https://tourista-travel.vercel.app/" target="_blank" rel="noopener"
+              data-img="assets/images/work/test_48.jpg">
+              <span class="row-no"><span class="sr">Project </span><span class="roll" aria-hidden="true"><i>005</i><i>005</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">Travello</h3>
+                <p class="row-desc">Step into a magical journey across India — where every flavour tells a story, every place holds a wonder, and every tradition echoes centuries of culture.</p>
+              </span>
+              <ul class="row-tags" aria-label="Technologies">
+                <li>React</li><li>JavaScript</li><li>CSS</li><li>HTML</li>
+              </ul>
+              <span class="tag status"><span class="dot"></span>Live</span>
+              <span class="row-arrow" aria-hidden="true">↗</span>
+              <img class="row-thumb" src="assets/images/work/test_48.jpg" alt="Travello website preview" loading="lazy" />
+            </a>
+
+            <div class="row row-reserved reveal" aria-label="Next project slot">
+              <span class="row-no"><span class="roll"><i>006</i><i>006</i></span></span>
+              <span class="row-main">
+                <h3 class="row-title">Next one loading</h3>
+                <p class="row-desc">Slot reserved. The index only moves forward.</p>
+              </span>
+              <span class="row-tags"></span>
+              <span class="tag status reserved"><span class="dot"></span>Reserved</span>
+              <span class="row-arrow" aria-hidden="true">…</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="work">
-        <div class="container">
-          <h2 class="h2" id="work">Selected Work</h2>
-          <div class="work-boxes">
-             <div class="work-box">
-  <div class="work-textbox">
-    <h3 class="h3">Vintage Global Services</h3>
-    
-    <p class="work-text">
-     A premium website for Vintage Global Services that showcases their export packaging expertise through a structured design with smooth animations, responsive layout, and intuitive navigation.
-    </p>
-    
-    <ol class="work-technologies">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-      <li>UX/UI Design</li>
-    </ol>
-
-    <div class="work-links">
-      <a href="https://vintage-solutions.netlify.app/" target="_blank" rel="noopener" class="link">
-        Explore this project
-      </a>
-
-      <a
-        href="https://vintage-solutions.netlify.app/"
-        target="_blank"
-        rel="noopener"
-        title="Visit Website"
-      >
-        <img
-          src="assets/images/social-links/website.png"
-          alt="Website"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </div>
-
-  <picture class="work-img">
-    <img
-      loading="lazy"
-      src="assets/images/work/wrk_1.JPG"
-      alt="Vintage Global Services - Premium Business Solutions Website"
-    />
-  </picture>
-</div>
-  <div class="work-box">
-  <div class="work-textbox">
-    <h3 class="h3">BUNTAE Community Platform</h3>
-
-    <p class="work-text">
-    A community platform for BUNTAE that connects Bunt engineers and architects across India while enabling networking, mentorship, and job opportunities through a usable and accessible experience.
-    </p>
-
-    <ol class="work-technologies">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>React.js</li>
-      <li>UI/UX Engineering</li>
-      <li>Community Platform Design</li>
-    </ol>
-
-    <div class="work-links">
-      <a href="https://www.buntae.com/" target="_blank" rel="noopener" class="link">
-        Explore this project
-      </a>
-
-      <a
-        href="https://www.buntae.com/"
-        target="_blank"
-        rel="noopener"
-        title="Visit Website"
-      >
-        <img
-          src="assets/images/social-links/website.png"
-          alt="Website"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </div>
-
-  <picture class="work-img">
-    <img
-      loading="lazy"
-      src="assets/images/work/wrk_2.JPG"
-      alt="BUNTAE - Community Platform for Engineers and Architects"
-    />
-  </picture>
-</div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">Pawlo UI website</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                 Pawlo is a vibrant platform connecting dog lovers, pet parents, and vets — all under one friendly digital roof.
-                </p>
-                <!-- Add technologies you used to build the project -->
-                <ol class="work-technologies">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JS</li>
-                </ol>
-
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://fanciful-brioche-5206f6.netlify.app/" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="https://fanciful-brioche-5206f6.netlify.app/"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/website.png"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-
-         <!-- Update img src and alt attribute  -->
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/test_45.JPG"
-                  alt="agency elevation"
-                />
-              </picture>
+      <!-- ================= ARTICLES ================= -->
+      <section class="section notes" id="notes">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-no reveal">002</span>
+            <div>
+              <h2 class="sec-title reveal">My<br /><em>articles</em></h2>
             </div>
-             <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">altered.agency</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  Website for altered.agency
-                </p>
-                <ol class="work-technologies">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JAVASCRIPT</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://altered.agency/" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="https://altered.agency/"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/website.png"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/test_46.JPG"
-                  alt="contribute dev"
-                />
-              </picture>
-            </div>
-          
-
-           
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">Travello</h3>
-                <!-- Add small description of your project  -->
-
-                <p class="work-text">Step into a magical journey across India — where every flavour tells a story, every place holds a wonder, and every tradition echoes centuries of culture.</p>
-                <ol class="work-technologies">
-                  <li>React</li>
-                  <li>JavaScript</li>
-                   <li>CSS</li>
-                  <li>HTML</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://tourista-travel.vercel.app/" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="https://tourista-travel.vercel.app/"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/website.png"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/test_48.JPG"
-                  alt="portfolio template"
-                />
-              </picture>
-            </div>
-            
-           
+            <p class="sec-note reveal">
+              Notes from the field
+              <span>Written while learning in public</span>
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+          <div class="notes-grid">
+            <article class="note note-feature reveal">
+              <div class="note-img">
+                <img src="assets/images/featured-blog.webp" alt="MacBook Pro on a desk" loading="lazy" data-img-parallax />
+              </div>
+              <div class="note-body">
+                <span class="note-tag">Featured</span>
+                <h3>The Importance of Software Documentation: Why It Is Necessary</h3>
+                <p>All the tips and tricks shared in this article are based on my personal experience and learning journey. This collection reflects the practical insights and techniques I've discovered while working with real-world projects.</p>
+                <div class="note-foot">
+                  <a class="link" data-hover target="_blank" rel="noopener"
+                    href="https://medium.com/@prathamshetty71/the-importance-of-software-documentation-why-it-is-necessary-32a4e3467434">Continue reading <span aria-hidden="true">↗</span></a>
+                  <span class="hearts"><img src="assets/images/heart-outline.svg" alt="" />416<span class="sr"> reactions</span></span>
+                </div>
+              </div>
+            </article>
 
-      <section class="article">
-        <div class="container">
-          <h2 class="h2" id="blog">My Articles</h2>
-          <div class="article-boxes">
-            <article class="article-box featured-article">
-              <div class="article-textbox">
+            <div class="note-list">
+              <article class="note note-small reveal">
+                <span class="note-no">02</span>
                 <div>
-                  <h3 class="h3">
-                    The Importance of Software Documentation: Why It Is Necessary
-                  </h3>
-                  <p class="article-text">
-                    All the tips and tricks shared in this article are based on my personal experience and learning journey. This collection reflects the practical insights and techniques I've discovered while working with  real-world projects.
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://medium.com/@prathamshetty71/the-importance-of-software-documentation-why-it-is-necessary-32a4e3467434" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img src="./assets/images/heart-outline.svg" alt="heart" />
-                    416
-                  </span>
-                </div>
-              </div>
-              <picture class="article-illustration">
-                <img
-                  src="assets/images/featured-blog.webp"
-                  alt="MacBook Pro"
-                  loading="lazy"
-                />
-              </picture>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">🧠 Demystifying Callback Functions in JavaScript: The What, Why, and How</h3>
-                  <p class="article-text">
-                   If you’re learning JavaScript, there’s a concept you’ll bump into again and again — the callback function. It sounds more intimidating than it actually is, but mastering callbacks is critical to becoming a proficient JavaScript developer.
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://medium.com/@prathamshetty71/demystifying-callback-functions-in-javascript-the-what-why-and-how-7f3c43276353n" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                      loading="lazy"
-                    />
-                    47
-                  </span>
-                </div>
-              </div>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">
-                    🚦 Why Do We Use defer in the script Tag? Understanding the Logic Behind It
-                  </h3>
-                  <p class="article-text">
-                    If you’ve ever added a script tag to an HTML document, you might have come across the mysterious defer attribute. You’ve probably seen it in tutorials or source code, but what does it really do? And more importantly — why should you use it?
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://medium.com/@prathamshetty71/heres-a-polished-medium-ready-article-that-dives-into-the-use-of-defer-in-the-script-tag-a85d5a02f5e9" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                      loading="lazy"
-                    />
-                    177
-                  </span>
-                </div>
-              </div>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">🧩 What’s the Use of Hooks Like useMemo and useCallback in React?</h3>
-                  <div class="article-text">
-                    When working with React, performance and re-renders can quickly become tricky territory — especially in complex components or large applications. This is where hooks like useMemo and useCallback come into play.
+                  <h3>🧠 Demystifying Callback Functions in JavaScript: The What, Why, and How</h3>
+                  <p>If you’re learning JavaScript, there’s a concept you’ll bump into again and again — the callback function. It sounds more intimidating than it actually is, but mastering callbacks is critical to becoming a proficient JavaScript developer.</p>
+                  <div class="note-foot">
+                    <a class="link" data-hover target="_blank" rel="noopener"
+                      href="https://medium.com/@prathamshetty71/demystifying-callback-functions-in-javascript-the-what-why-and-how-7f3c43276353">Continue reading <span aria-hidden="true">↗</span></a>
+                    <span class="hearts"><img src="assets/images/heart-outline.svg" alt="" />47<span class="sr"> reactions</span></span>
                   </div>
                 </div>
-                <div class="article-info">
-                  <a href="https://medium.com/@prathamshetty71/whats-the-use-of-hooks-like-usememo-and-usecallback-in-react-4af618c79ac3" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      loading="lazy"
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                    />
-                    350
-                  </span>
+              </article>
+
+              <article class="note note-small reveal">
+                <span class="note-no">03</span>
+                <div>
+                  <h3>🚦 Why Do We Use defer in the script Tag? Understanding the Logic Behind It</h3>
+                  <p>If you’ve ever added a script tag to an HTML document, you might have come across the mysterious defer attribute. You’ve probably seen it in tutorials or source code, but what does it really do? And more importantly — why should you use it?</p>
+                  <div class="note-foot">
+                    <a class="link" data-hover target="_blank" rel="noopener"
+                      href="https://medium.com/@prathamshetty71/heres-a-polished-medium-ready-article-that-dives-into-the-use-of-defer-in-the-script-tag-a85d5a02f5e9">Continue reading <span aria-hidden="true">↗</span></a>
+                    <span class="hearts"><img src="assets/images/heart-outline.svg" alt="" />177<span class="sr"> reactions</span></span>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+              </article>
 
-      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
-
-      <section class="skills">
-        <div class="container">
-          <h2 class="h2" id="skills">My Toolkit</h2>
-          <div class="skills-imgs">
-                <!-- Frontend Technologies -->
-<img src="assets/images/skills/html.svg" alt="HTML" class="skills-img" loading="lazy" title="HTML">
-<img src="assets/images/skills/css.svg" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-<img src="assets/images/skills/sass.svg" alt="SASS" class="skills-img" loading="lazy" title="SASS">
-<img src="assets/images/skills/js.svg" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
-<img src="assets/images/skills/ts.svg" alt="TypeScript" class="skills-img" loading="lazy" title="TypeScript">
-<img src="assets/images/skills/react.png" alt="React" class="skills-img" loading="lazy" title="React">
-<img src="assets/images/skills/angular.svg" alt="Angular" class="skills-img" loading="lazy" title="Angular">
-<img src="assets/images/skills/Next.js.svg" alt="Next.js" class="skills-img" loading="lazy" title="Next.js">
-<img src="assets/images/skills/bootstarp.svg" alt="Bootstrap" class="skills-img" loading="lazy" title="Bootstrap">
-<img src="assets/images/skills/respo.png" alt="Responsively" class="skills-img" loading="lazy" title="Responsively">
-<img src="assets/images/skills/figma.svg" alt="Figma" class="skills-img" loading="lazy" title="Figma">
-<img src="assets/images/skills/java.svg" alt="Java" class="skills-img" loading="lazy" title="Java">
-
-<!-- Backend Technologies -->
-<img src="assets/images/skills/node.js.svg" alt="Node.js" class="skills-img" loading="lazy" title="Node.js">
-<img src="assets/images/skills/express.svg" alt="Express.js" class="skills-img" loading="lazy" title="Express.js">
-<img src="assets/images/skills/spring.svg" alt="Spring Boot" class="skills-img" loading="lazy" title="Spring Boot">
-<img src="assets/images/skills/supabase.svg" alt="Supabase" class="skills-img" loading="lazy" title="Supabase">
-
-<!-- Databases -->
-<img src="assets/images/skills/mongo.svg" alt="MongoDB" class="skills-img" loading="lazy" title="MongoDB">
-<img src="assets/images/skills/Microsoft SQL Server.svg" alt="Microsoft SQL Server" class="skills-img" loading="lazy" title="Microsoft SQL Server">
-<img src="assets/images/skills/mysql.svg" alt="MySQL" class="skills-img" loading="lazy" title="MySQL">
-<img src="assets/images/skills/pgsql.png" alt="PostgreSQL" class="skills-img" loading="lazy" title="PostgreSQL">
-
-<!-- Tools -->
-<img src="assets/images/skills/git.svg" alt="Git" class="skills-img" loading="lazy" title="Git">
-<img src="assets/images/skills/github.svg" alt="GitHub" class="skills-img" loading="lazy" title="GitHub">
-<img src="assets/images/skills/gulp.svg" alt="Gulp" class="skills-img" loading="lazy" title="Gulp">
-
-<!-- Testing -->
-<img src="assets/images/skills/selenium.svg" alt="Selenium" class="skills-img" loading="lazy" title="Selenium">
-<img src="assets/images/skills/notion.svg" alt="Notion" class="skills-img" loading="lazy" title="Notion">
-
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
-
-      <section>
-        <h2 class="h2">Testimonials</h2>
-        <div class="container">
-          <ol class="testimonials">
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Working with Pratham was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/rich-harris.png"
-                  alt="Rich Harris"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Harris Kareem</h3>
-                  <p class="testimonial-author-job">Developer @Outlets</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Pratham is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/frank-mcsherry.webp"
-                  alt="Andrew Mead"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">
-                   Andrew Mead
-                  </h3>
-                  <p class="testimonial-author-job">Chief Scientist @Logos
-                  </p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-             
-                Talented artist, experienced with various
-                media and can make any project you are working on look good. He is
-                easy to work with and is a self starter. I would work with Pratham
-                again.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/brian-hirsh.png"
-                  alt="Brian Hirsh"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
-                  <p class="testimonial-author-job">Head @Zero-in</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Pratham is a true professional with amazing talent. He is a creative
-                thinker, has his finger on the pulse of whats to come, and
-                absolutely one of the quickest and best problem solvers I have
-                ever met.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/adam.png"
-                  alt="Adam Argalye"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Adam Argalye</h3>
-                  <p class="testimonial-author-job">SWE @Google</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-               Pratham is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because she understands how to tackle unknown problems with gumption. 
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/val-head.png"
-                  alt="Val Head"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Val Head</h3>
-                  <p class="testimonial-author-job">CEO @Engines</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Pratham is a talented artist. He is very experienced with various
-                media and can make any project you are working on look good. He is
-                easy to work with and is a self starter. I would work with Pratham
-                again.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/tim-satterwhite.webp"
-                  alt="Gary Simon"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Gary Simon</h3>
-                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="contact">
-        <div class="container">
-          <h2 class="h2" id="contact">Send Message</h2>
-          <div class="contact-content">
-            <div class="contact-textbox">
-              <!-- Please comment this component if you're not available for hire -->
-              <strong href="#" class="hire-alert">
-                <span class="indicator"></span>
-                Available for hire
-              </strong>
-              <p class="contact-text">
-                As a software engineer, I construct web interfaces and design
-                systems with a special love for accessibility and the
-                performance. I tend to code things from scratch and enjoy
-                bringing ideas to life.
-              </p>
-              <p class="contact-text">
-                In my free time, I enjoy playing football ⚽
-              </p>
-              <!-- Replace src with your signatures and name -->
-              <img
-                src="assets/images/signature_1.png"
-                alt="Pratham Shetty"
-                class="signatures"
-                loading="lazy"
-              />
+              <article class="note note-small reveal">
+                <span class="note-no">04</span>
+                <div>
+                  <h3>🧩 What’s the Use of Hooks Like useMemo and useCallback in React?</h3>
+                  <p>When working with React, performance and re-renders can quickly become tricky territory — especially in complex components or large applications. This is where hooks like useMemo and useCallback come into play.</p>
+                  <div class="note-foot">
+                    <a class="link" data-hover target="_blank" rel="noopener"
+                      href="https://medium.com/@prathamshetty71/whats-the-use-of-hooks-like-usememo-and-usecallback-in-react-4af618c79ac3">Continue reading <span aria-hidden="true">↗</span></a>
+                    <span class="hearts"><img src="assets/images/heart-outline.svg" alt="" />350<span class="sr"> reactions</span></span>
+                  </div>
+                </div>
+              </article>
             </div>
-            <form action="#" class="contact-form" netlify>
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  inputmode="email"
-                />
-              </div>
-              <div class="form-field">
-                <label for="message">How can I help you?</label>
-                <textarea name="message" id="message"  required></textarea>
-              </div>
-              <button type="submit" class="btn btn-cta">Send</button>
-            </form>
           </div>
+        </div>
+      </section>
+
+      <!-- ================= TOOLKIT ================= -->
+      <section class="section toolkit" id="toolkit">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-no reveal">003</span>
+            <div>
+              <h2 class="sec-title reveal">My<br /><em>toolkit</em></h2>
+            </div>
+            <p class="sec-note reveal">
+              Specimens on the bench
+              <span>Filter, hover, inspect</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- scroll-driven type strips -->
+        <div class="kit-strip" aria-hidden="true">
+          <p data-hscroll="-1">Frontend <i>✦</i> Backend <i>✦</i> Databases <i>✦</i> Tooling <i>✦</i> Frontend <i>✦</i> Backend <i>✦</i> Databases <i>✦</i> Tooling <i>✦</i> Frontend <i>✦</i> Backend <i>✦</i></p>
+          <p class="solid" data-hscroll="1">Build <i>✦</i> Ship <i>✦</i> Learn <i>✦</i> Repeat <i>✦</i> Build <i>✦</i> Ship <i>✦</i> Learn <i>✦</i> Repeat <i>✦</i> Build <i>✦</i> Ship <i>✦</i> Learn <i>✦</i></p>
+        </div>
+
+        <div class="wrap">
+          <div class="kit-bar reveal">
+            <div class="chips" role="group" aria-label="Filter tools by discipline">
+              <button type="button" class="chip is-on" data-filter="all" aria-pressed="true" data-hover>All <sup>25</sup></button>
+              <button type="button" class="chip" data-filter="frontend" aria-pressed="false" data-hover><i class="cdot"></i>Frontend <sup>12</sup></button>
+              <button type="button" class="chip" data-filter="backend" aria-pressed="false" data-hover><i class="cdot"></i>Backend <sup>04</sup></button>
+              <button type="button" class="chip" data-filter="databases" aria-pressed="false" data-hover><i class="cdot"></i>Databases <sup>04</sup></button>
+              <button type="button" class="chip" data-filter="tools" aria-pressed="false" data-hover><i class="cdot"></i>Tools <sup>05</sup></button>
+            </div>
+            <p class="kit-count" aria-live="polite"><b>25</b> / 25 specimens shown</p>
+          </div>
+
+          <ul class="tools">
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">01</span><span class="tool-sym" aria-hidden="true">Ht</span><span class="tool-name">HTML</span><span class="ico"><img src="assets/images/skills/html.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">02</span><span class="tool-sym" aria-hidden="true">Cs</span><span class="tool-name">CSS</span><span class="ico"><img src="assets/images/skills/css.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">03</span><span class="tool-sym" aria-hidden="true">Sa</span><span class="tool-name">SASS</span><span class="ico"><img src="assets/images/skills/sass.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">04</span><span class="tool-sym" aria-hidden="true">Js</span><span class="tool-name">JavaScript</span><span class="ico"><img src="assets/images/skills/js.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">05</span><span class="tool-sym" aria-hidden="true">Ts</span><span class="tool-name">TypeScript</span><span class="ico"><img src="assets/images/skills/ts.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">06</span><span class="tool-sym" aria-hidden="true">Re</span><span class="tool-name">React</span><span class="ico"><img src="assets/images/skills/react.png" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">07</span><span class="tool-sym" aria-hidden="true">Ng</span><span class="tool-name">Angular</span><span class="ico"><img src="assets/images/skills/angular.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">08</span><span class="tool-sym" aria-hidden="true">Nx</span><span class="tool-name">Next.js</span><span class="ico"><img src="assets/images/skills/next.js.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">09</span><span class="tool-sym" aria-hidden="true">Bs</span><span class="tool-name">Bootstrap</span><span class="ico"><img src="assets/images/skills/bootstarp.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">10</span><span class="tool-sym" aria-hidden="true">Rs</span><span class="tool-name">Responsively</span><span class="ico"><img src="assets/images/skills/respo.png" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">11</span><span class="tool-sym" aria-hidden="true">Fg</span><span class="tool-name">Figma</span><span class="ico"><img src="assets/images/skills/figma.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="frontend"><span class="tool-no" aria-hidden="true">12</span><span class="tool-sym" aria-hidden="true">Jv</span><span class="tool-name">Java</span><span class="ico"><img src="assets/images/skills/java.svg" alt="" loading="lazy" /></span></li>
+
+            <li class="tool" data-cat="backend"><span class="tool-no" aria-hidden="true">13</span><span class="tool-sym" aria-hidden="true">Nd</span><span class="tool-name">Node.js</span><span class="ico"><img src="assets/images/skills/node.js.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="backend"><span class="tool-no" aria-hidden="true">14</span><span class="tool-sym" aria-hidden="true">Ex</span><span class="tool-name">Express.js</span><span class="ico"><img src="assets/images/skills/express.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="backend"><span class="tool-no" aria-hidden="true">15</span><span class="tool-sym" aria-hidden="true">Sp</span><span class="tool-name">Spring Boot</span><span class="ico"><img src="assets/images/skills/spring.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="backend"><span class="tool-no" aria-hidden="true">16</span><span class="tool-sym" aria-hidden="true">Sb</span><span class="tool-name">Supabase</span><span class="ico"><img src="assets/images/skills/supabase.svg" alt="" loading="lazy" /></span></li>
+
+            <li class="tool" data-cat="databases"><span class="tool-no" aria-hidden="true">17</span><span class="tool-sym" aria-hidden="true">Mg</span><span class="tool-name">MongoDB</span><span class="ico"><img src="assets/images/skills/mongo.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="databases"><span class="tool-no" aria-hidden="true">18</span><span class="tool-sym" aria-hidden="true">Sq</span><span class="tool-name">SQL Server</span><span class="ico"><img src="assets/images/skills/microsoft%20sql%20server.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="databases"><span class="tool-no" aria-hidden="true">19</span><span class="tool-sym" aria-hidden="true">My</span><span class="tool-name">MySQL</span><span class="ico"><img src="assets/images/skills/mysql.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="databases"><span class="tool-no" aria-hidden="true">20</span><span class="tool-sym" aria-hidden="true">Pg</span><span class="tool-name">PostgreSQL</span><span class="ico"><img src="assets/images/skills/pgsql.png" alt="" loading="lazy" /></span></li>
+
+            <li class="tool" data-cat="tools"><span class="tool-no" aria-hidden="true">21</span><span class="tool-sym" aria-hidden="true">Gt</span><span class="tool-name">Git</span><span class="ico"><img src="assets/images/skills/git.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="tools"><span class="tool-no" aria-hidden="true">22</span><span class="tool-sym" aria-hidden="true">Gh</span><span class="tool-name">GitHub</span><span class="ico"><img src="assets/images/skills/github.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="tools"><span class="tool-no" aria-hidden="true">23</span><span class="tool-sym" aria-hidden="true">Gu</span><span class="tool-name">Gulp</span><span class="ico"><img src="assets/images/skills/gulp.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="tools"><span class="tool-no" aria-hidden="true">24</span><span class="tool-sym" aria-hidden="true">Se</span><span class="tool-name">Selenium</span><span class="ico"><img src="assets/images/skills/selenium.svg" alt="" loading="lazy" /></span></li>
+            <li class="tool" data-cat="tools"><span class="tool-no" aria-hidden="true">25</span><span class="tool-sym" aria-hidden="true">No</span><span class="tool-name">Notion</span><span class="ico"><img src="assets/images/skills/notion.svg" alt="" loading="lazy" /></span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= JOURNEY (scroll-driven roadmap) ================= -->
+      <section class="journey road" id="journey" aria-label="Work experience roadmap">
+        <div class="wrap road-head">
+          <div class="jh-left">
+            <span class="sec-no">004</span>
+            <h2 class="sec-title">My <em>journey</em></h2>
+          </div>
+          <p class="road-sub">Follow the road.<span>Every stop is a company that shaped me.</span></p>
+        </div>
+
+        <div class="wrap">
+          <div class="road-canvas">
+            <svg class="road-svg" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#e8ff47" stop-opacity="0.38" />
+                  <stop offset="1" stop-color="#e8ff47" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="road-edge" />
+              <path class="road-asphalt" />
+              <path class="road-dash" />
+              <path class="road-lit" />
+              <g class="car">
+                <g class="car-rot">
+                  <path d="M-10 21 L-30 86 L30 86 L10 21 Z" fill="url(#beam)" />
+                  <rect x="-12" y="-21" width="24" height="42" rx="8" fill="#e8ff47" />
+                  <rect x="-8.5" y="3" width="17" height="9" rx="2.5" fill="#0b0b0b" />
+                  <rect x="-8.5" y="-13" width="17" height="6" rx="2" fill="#0b0b0b" opacity="0.7" />
+                  <circle cx="-7.5" cy="19.5" r="2.4" fill="#ffffff" />
+                  <circle cx="7.5" cy="19.5" r="2.4" fill="#ffffff" />
+                  <rect x="-9" y="-21" width="5" height="2" fill="#ff4d4d" />
+                  <rect x="4" y="-21" width="5" height="2" fill="#ff4d4d" />
+                </g>
+              </g>
+            </svg>
+
+            <div class="start-flag" aria-hidden="true"><span>Start</span></div>
+
+            <!-- 01 -->
+            <div class="rstop" data-side="left" data-date="2022-12" data-label="Kohli Media">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">2022</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">01</span>
+              <span class="sign" aria-hidden="true"><i>Stop 01</i><b>Dec 2022</b></span>
+              <article class="rcard">
+                <div class="stop-top">
+                  <span class="stop-logo"><span class="mono">KM</span></span>
+                  <div class="stop-meta">
+                    <span class="badge">Internship</span>
+                    <time>Dec 2022 — Feb 2023</time>
+                  </div>
+                </div>
+                <h3 class="stop-role">Junior Web Developer &amp; People Engagement</h3>
+                <p class="stop-co">Kohli Media LLP</p>
+                <p class="stop-step"><i aria-hidden="true">↳</i> Step 01 · Where it started</p>
+                <ul class="stop-points">
+                  <li>Led HR coordination and hiring support</li>
+                  <li>Organised team events, built culture</li>
+                  <li>First steps into web development</li>
+                </ul>
+                <ul class="stop-tags" aria-label="Skills"><li>Web basics</li><li>Hiring</li><li>Teamwork</li></ul>
+              </article>
+            </div>
+
+            <!-- 02 -->
+            <div class="rstop" data-side="right" data-date="2023-09" data-label="Claidroid">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">2023</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">02</span>
+              <span class="sign" aria-hidden="true"><i>Stop 02</i><b>Sep 2023</b></span>
+              <article class="rcard">
+                <div class="stop-top">
+                  <span class="stop-logo"><img src="assets/images/trusted-by/claidroid.png" alt="Claidroid Technologies" data-initials="CT" loading="lazy" /></span>
+                  <div class="stop-meta">
+                    <span class="badge">Internship</span>
+                    <time>Sep 2023 — Nov 2023</time>
+                  </div>
+                </div>
+                <h3 class="stop-role">Software Developer Intern</h3>
+                <p class="stop-co">Claidroid Technologies</p>
+                <p class="stop-step"><i aria-hidden="true">↳</i> Step 02 · First real React project</p>
+                <ul class="stop-points">
+                  <li>Built and improved UI in a React project</li>
+                  <li>Used JSON to streamline image management</li>
+                  <li>Learned modular, reusable components</li>
+                </ul>
+                <ul class="stop-tags" aria-label="Skills"><li>React</li><li>JSON</li><li>Components</li></ul>
+              </article>
+            </div>
+
+            <!-- 03 -->
+            <div class="rstop" data-side="left" data-date="2023-11" data-label="Pixolo">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">2023</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">03</span>
+              <span class="sign" aria-hidden="true"><i>Stop 03</i><b>Nov 2023</b></span>
+              <article class="rcard">
+                <div class="stop-top">
+                  <span class="stop-logo"><img src="assets/images/trusted-by/pixolo.png" alt="Pixolo Productions" data-initials="PX" loading="lazy" /></span>
+                  <div class="stop-meta">
+                    <span class="badge">Internship</span>
+                    <time>Nov 2023 — Feb 2024</time>
+                  </div>
+                </div>
+                <h3 class="stop-role">Front-end Developer</h3>
+                <p class="stop-co">Pixolo Productions</p>
+                <p class="stop-step"><i aria-hidden="true">↳</i> Step 03 · Next.js &amp; TypeScript</p>
+                <ul class="stop-points">
+                  <li>Coded header, clients and feature sections of a football app</li>
+                  <li>Built a team-management login page in Next.js</li>
+                  <li>Turned designs into HTML + SCSS</li>
+                </ul>
+                <ul class="stop-tags" aria-label="Skills"><li>HTML</li><li>SCSS</li><li>Next.js</li><li>TypeScript</li></ul>
+              </article>
+            </div>
+
+            <!-- 04 -->
+            <div class="rstop" data-side="right" data-date="2024-03" data-label="Famekeeda">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">2024</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">04</span>
+              <span class="sign" aria-hidden="true"><i>Stop 04</i><b>Mar 2024</b></span>
+              <article class="rcard">
+                <div class="stop-top">
+                  <span class="stop-logo"><img src="assets/images/trusted-by/famekeeda.svg" alt="Famekeeda Networks" data-initials="FK" loading="lazy" /></span>
+                  <div class="stop-meta">
+                    <span class="badge badge-solid">Full-time</span>
+                    <time>Mar 2024 — Nov 2025</time>
+                  </div>
+                </div>
+                <h3 class="stop-role">Front-end Developer</h3>
+                <p class="stop-co">Famekeeda Networks</p>
+                <p class="stop-step"><i aria-hidden="true">↳</i> Step 04 · First full-time role</p>
+                <ul class="stop-points">
+                  <li>Led frontend of Fame Dash v2 in Next.js</li>
+                  <li>Built a PDF search tool and a browser extension</li>
+                  <li>Scraped event data with Selenium, served over REST</li>
+                </ul>
+                <ul class="stop-tags" aria-label="Skills"><li>Next.js</li><li>Angular</li><li>Figma</li><li>Selenium</li><li>Flutter</li></ul>
+              </article>
+            </div>
+
+            <!-- 05 -->
+            <div class="rstop" data-side="left" data-date="2025-03" data-label="Gray Matrix">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">2025</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">05</span>
+              <span class="sign" aria-hidden="true"><i>Stop 05</i><b>Mar 2025</b></span>
+              <article class="rcard is-now">
+                <div class="stop-top">
+                  <span class="stop-logo"><span class="mono">GM</span></span>
+                  <div class="stop-meta">
+                    <span class="badge badge-now"><i class="pulse" aria-hidden="true"></i>Now</span>
+                    <time>Mar 2025 — Present</time>
+                  </div>
+                </div>
+                <h3 class="stop-role">Associate Software Developer</h3>
+                <p class="stop-co">Gray Matrix Solutions</p>
+                <p class="stop-step"><i aria-hidden="true">↳</i> Step 05 · Frontend + backend</p>
+                <ul class="stop-points">
+                  <li>Responsive UIs for products like Talk.ai</li>
+                  <li>React + Redux architecture, reusable components</li>
+                  <li>Node.js and Express REST APIs end to end</li>
+                </ul>
+                <ul class="stop-tags" aria-label="Skills"><li>React</li><li>Redux</li><li>Node.js</li><li>Express</li><li>REST</li></ul>
+              </article>
+            </div>
+
+            <!-- 06: next -->
+            <div class="rstop" data-side="right" data-date="now" data-label="Next chapter">
+              <span class="ghost-year" aria-hidden="true" data-speed="0.12">NEXT</span>
+              <span class="conn" aria-hidden="true"></span>
+              <span class="pin" aria-hidden="true">06</span>
+              <span class="sign" aria-hidden="true"><i>Stop 06</i><b>Today</b></span>
+              <article class="rcard is-end">
+                <p class="eyebrow">Next chapter</p>
+                <h3 class="stop-end-title">What's<br /><em>next?</em></h3>
+                <p class="stop-end-copy">Open to new opportunities. Could be with you.</p>
+                <a class="btn btn-lime" href="#contact" data-hover>Let's talk <span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating progress pill -->
+        <div class="road-pill" aria-hidden="true">
+          <span class="pulse"></span>
+          <span class="rp-step">Stop <b>01</b> / 06</span>
+          <span class="rp-date">Dec 2022</span>
+          <span class="rp-place">Kohli Media</span>
+        </div>
+      </section>
+
+      <!-- ================= WHY / ABOUT ================= -->
+      <section class="section why" id="why">
+        <div class="wrap why-grid">
+          <figure class="portrait reveal">
+            <div class="portrait-frame">
+              <img src="assets/images/pf.jpg" alt="Portrait of Pratham Shetty" loading="lazy" data-img-parallax />
+              <span class="portrait-tag">Pratham / Software Engineer</span>
+            </div>
+            <img class="signature" src="assets/images/signature_1.png" alt="Pratham Shetty signature" loading="lazy" />
+          </figure>
+
+          <div class="why-copy">
+            <p class="eyebrow reveal">About / Why I build this way</p>
+            <h2 class="why-title" data-words>
+              Software that's fast, accessible and built from scratch.
+            </h2>
+            <p class="why-lead reveal">
+              As a software engineer, I construct web interfaces and design systems with a special
+              love for accessibility and performance. I tend to code things from scratch and enjoy
+              bringing ideas to life.
+            </p>
+
+            <ol class="rules">
+              <li class="rule reveal">
+                <span class="rule-no">R.01</span>
+                <p><strong>Accessible by default.</strong> If it doesn't work for everyone, on every device and input, it isn't finished.</p>
+              </li>
+              <li class="rule reveal">
+                <span class="rule-no">R.02</span>
+                <p><strong>Performance is a feature.</strong> Fast pages are kind pages. Every kilobyte has to earn its place.</p>
+              </li>
+              <li class="rule reveal">
+                <span class="rule-no">R.03</span>
+                <p><strong>From scratch, on purpose.</strong> I'd rather understand every line than inherit a pile I can't explain.</p>
+              </li>
+              <li class="rule reveal">
+                <span class="rule-no">R.04</span>
+                <p><strong>Learn in public.</strong> What I figure out, I write down. The notes above are how I keep that promise.</p>
+              </li>
+            </ol>
+
+            <p class="why-foot reveal">In my free time, I enjoy playing football ⚽</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIALS ================= -->
+      <section class="section words" id="words">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="sec-no reveal">005</span>
+            <div>
+              <h2 class="sec-title reveal">What people<br /><em>say</em></h2>
+            </div>
+            <div class="words-ctrl reveal">
+              <button type="button" class="ctrl" data-dir="-1" aria-label="Previous testimonial" data-hover>←</button>
+              <button type="button" class="ctrl" data-dir="1" aria-label="Next testimonial" data-hover>→</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- scroll-driven type strips (decorative) -->
+        <div class="kit-strip say-strip" aria-hidden="true">
+          <p data-hscroll="1">Kind words <i>✦</i> Kind words <i>✦</i> Kind words <i>✦</i> Kind words <i>✦</i> Kind words <i>✦</i> Kind words <i>✦</i> Kind words <i>✦</i></p>
+          <p class="solid" data-hscroll="-1">Trusted <i>✦</i> Recommended <i>✦</i> Remembered <i>✦</i> Trusted <i>✦</i> Recommended <i>✦</i> Remembered <i>✦</i> Trusted <i>✦</i></p>
+        </div>
+
+        <ol class="words-track" tabindex="0" aria-label="Testimonials">
+          <li class="word">
+            <blockquote>Working with Pratham was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/rich-harris.png" alt="" loading="lazy" />
+              <figcaption><b>Harris Kareem</b><span>Developer @Outlets</span></figcaption>
+            </figure>
+          </li>
+          <li class="word">
+            <blockquote>Pratham is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/frank-mcsherry.webp" alt="" loading="lazy" />
+              <figcaption><b>Andrew Mead</b><span>Chief Scientist @Logos</span></figcaption>
+            </figure>
+          </li>
+          <li class="word">
+            <blockquote>Talented artist, experienced with various media and can make any project you are working on look good. He is easy to work with and is a self starter. I would work with Pratham again.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/brian-hirsh.png" alt="" loading="lazy" />
+              <figcaption><b>Brian Hirsh</b><span>Head @Zero-in</span></figcaption>
+            </figure>
+          </li>
+          <li class="word">
+            <blockquote>Pratham is a true professional with amazing talent. He is a creative thinker, has his finger on the pulse of whats to come, and absolutely one of the quickest and best problem solvers I have ever met.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/adam.png" alt="" loading="lazy" />
+              <figcaption><b>Adam Argalye</b><span>SWE @Google</span></figcaption>
+            </figure>
+          </li>
+          <li class="word">
+            <blockquote>Pratham is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because he understands how to tackle unknown problems with gumption.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/val-head.png" alt="" loading="lazy" />
+              <figcaption><b>Val Head</b><span>CEO @Engines</span></figcaption>
+            </figure>
+          </li>
+          <li class="word">
+            <blockquote>Pratham is a talented artist. He is very experienced with various media and can make any project you are working on look good. He is easy to work with and is a self starter. I would work with Pratham again.</blockquote>
+            <figure>
+              <img src="assets/images/testimonials/tim-satterwhite.webp" alt="" loading="lazy" />
+              <figcaption><b>Gary Simon</b><span>A11y Advocate @W3C</span></figcaption>
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section contact" id="contact">
+        <div class="contact-ghost" aria-hidden="true" data-speed="-0.08">HELLO</div>
+        <div class="wrap contact-grid">
+          <div>
+            <p class="avail-pill reveal"><span class="pulse"></span>Available for hire</p>
+            <h2 class="contact-title reveal">
+              Something new<br />is <em>always</em><br />shipping.
+            </h2>
+            <p class="contact-copy reveal">
+              Have a product, a redesign or a rough idea? Tell me what you're building and how I can
+              help.
+            </p>
+            <ul class="socials reveal">
+              <li><a data-hover href="https://github.com/Pratham3006" target="_blank" rel="noopener" title="GitHub"><img src="assets/images/social-links/github.svg" alt="GitHub" /></a></li>
+              <li><a data-hover href="https://leetcode.com/u/pratham4556/" target="_blank" rel="noopener" title="LeetCode"><img src="assets/images/social-links/leetcode.png" alt="LeetCode" /></a></li>
+              <li><a data-hover href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener" title="LinkedIn"><img src="assets/images/social-links/linkedin.svg" alt="LinkedIn" /></a></li>
+            </ul>
+          </div>
+
+          <form class="form reveal" name="contact" novalidate>
+            <p class="hp"><label>Don't fill this out <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required />
+            </div>
+            <div class="field">
+              <label for="message">How can I help you?</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-lime" data-hover>Send message <span aria-hidden="true">→</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <!-- Update href and src attributes -->
-          <nav>
-            <ol class="footer-links">
-              <li class="footer-link">
-                <a title="GitHub" href="https://github.com/Pratham3006" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/github.svg"
-                    alt="GitHub"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Leetcode" href="https://leetcode.com/u/pratham4556/" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/leetcode.png"
-                    alt="Codepen"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/linkedin.svg"
-                    alt="Linkedin"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Twitter" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/twitter.svg"
-                    alt="Twitter"
-                /></a>
-              </li>
-            </ol>
-          </nav>
-          <p class="footer-text">
-            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/Pratham3006">Pratham Shetty</a>
-          </p>
-          <label class="theme-switch" for="theme-switch">
-            <span>Dark Theme</span>
-            <input type="checkbox" id="theme-switch" role="switch"/>
-          </label>
-        </div>
+    <footer class="site-footer">
+      <div class="wrap foot">
+        <p>&copy; <span id="year">2026</span> Pratham Shetty. Est. in India.</p>
+        <a class="to-top" href="#top" data-hover>Back to top ↑</a>
       </div>
     </footer>
   </body>
